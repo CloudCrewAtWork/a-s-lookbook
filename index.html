@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Anurag & Shivani Lookbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: couture lookbook — white page, gold Bodoni lettering, each event a chapter with a jewel-tone marker, split Anurag | Shivani */
+:root{
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#26211C; --muted:#857B70; --line:#ECE4D6; --shade:#FAF7F1;
+  --gold:#A6812A; --gold-deep:#8A6A1E; --gold-soft:#F6EFDF;
+  --anurag:#8A6A1E; --shivani:#9C3348;
+  --ok:#2F6B47; --ok-soft:#EAF3EC; --mid:#8A6A1E; --mid-soft:#F6EFDF; --idea:#7A7068; --idea-soft:#F3F0EC;
+  --e-snow:#4A5D80; --e-temple:#B06A1C; --e-ice:#2D7C84; --e-haldi:#C59A12;
+  --e-mehendi:#4F7A33; --e-puja:#B8532C; --e-wedding:#9C3348; --e-sangeet:#5A4A9C;
+  --display:"Bodoni Moda",Didot,"Bodoni 72",Georgia,serif;
+  --body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;font-weight:400}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:40px 96px;display:grid;gap:28px}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+header{display:grid;gap:10px;justify-items:center;text-align:center;padding-bottom:8px}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;font-weight:500;color:var(--gold)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(38px,9vw,72px);line-height:1;margin:0;color:var(--gold);letter-spacing:.01em;text-wrap:balance}
+h1 .a,h1 .s{font-style:italic}
+h1 .amp{font-family:var(--display);font-size:.55em;color:var(--gold);opacity:.75;vertical-align:.18em;margin:0 .15em}
+.rule{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:4px 0}
+.sub{margin:0;color:var(--muted);max-width:52ch;font-weight:300}
+.status{font-size:12px;color:var(--muted);letter-spacing:.04em} .status.err{color:var(--shivani)}
+.tally{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-variant-numeric:tabular-nums;color:var(--muted)}
+.tally .a{color:var(--anurag)} .tally .s{color:var(--shivani)}
+/* sticky nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);padding-block:12px;margin-inline:-16px;padding-inline:16px;border-bottom:1px solid var(--line);display:grid;gap:10px}
+.timeline{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.timeline::-webkit-scrollbar{display:none}
+.tl{flex:0 0 auto;display:flex;align-items:center;gap:7px;border:1px solid transparent;background:transparent;border-radius:999px;padding:6px 12px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;cursor:pointer;white-space:nowrap;color:var(--ink)}
+.tl:hover{border-color:var(--line)}
+.tl i{width:7px;height:7px;border-radius:50%;background:var(--c);flex:0 0 auto}
+.tl b{font-weight:400;color:var(--gold);font-variant-numeric:tabular-nums}
+.sides{display:flex;gap:2px;justify-content:center}
+.side{border:0;border-bottom:1px solid transparent;background:transparent;padding:4px 12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;cursor:pointer;color:var(--muted)}
+.side[aria-pressed="true"]{color:var(--gold-deep);border-bottom-color:var(--gold)}
+/* event chapter */
+.event{scroll-margin-top:120px;padding-block:28px 8px;border-top:1px solid var(--line)}
+.ev-head{display:grid;gap:6px;justify-items:center;text-align:center;padding-bottom:22px}
+.ev-tag{display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--c)}
+.ev-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--c)}
+.ev-name{font-family:var(--display);font-weight:400;font-size:clamp(26px,5.5vw,40px);line-height:1.1;color:var(--gold);text-align:center;border:0;border-bottom:1px solid transparent;background:transparent;padding:0 0 2px;width:100%;max-width:640px}
+.ev-meta{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 14px;align-items:center;font-size:13px}
+.ev-meta input{background:transparent;border:0;border-bottom:1px solid transparent;padding:2px 4px;font-size:13px;color:var(--muted);text-align:center;min-width:0;font-weight:300}
+.ev-meta .place{width:min(320px,100%)}
+.ev-meta input:hover,.ev-name:hover{border-bottom-color:var(--line)}
+.ev-meta input:focus,.ev-name:focus{outline:none;border-bottom-color:var(--gold)}
+.ev-del{background:transparent;border:0;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);cursor:pointer;padding:4px 8px;border-radius:999px;opacity:.7}
+.ev-del:hover{opacity:1}
+.ev-del.confirm{background:var(--shivani);color:#fff;opacity:1}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.col{padding:4px 22px 24px;display:grid;gap:14px;align-content:start;min-width:0}
+.col+.col{border-left:1px solid var(--line)}
+.col-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px}
+.who{font-family:var(--display);font-style:italic;font-size:24px;margin-right:auto}
+.who.anurag{color:var(--anurag)} .who.shivani{color:var(--shivani)}
+.add{border:1px solid var(--gold);background:transparent;color:var(--gold-deep);border-radius:999px;padding:4px 12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;cursor:pointer}
+.add:hover{background:var(--gold-soft)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.empty{border:1px dashed var(--line);border-radius:2px;padding:22px 14px;text-align:center;color:var(--muted);font-size:13px;font-weight:300;font-style:italic}
+/* look card */
+.card{background:var(--surface);display:flex;flex-direction:column;min-width:0;border:1px solid var(--line)}
+.card.inspo{background:var(--shade)}
+.pics{position:relative;background:var(--shade)}
+.hero{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;cursor:zoom-in;background:var(--shade)}
+.nopic{aspect-ratio:3/4;display:grid;place-items:center;color:var(--gold-deep);font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-align:center;padding:12px;cursor:pointer;border:0;width:100%;background:var(--shade)}
+.thumbs{display:flex;gap:4px;padding:6px 6px 0;overflow-x:auto}
+.thumb{position:relative;flex:0 0 auto}
+.thumb img{width:40px;height:52px;object-fit:cover;display:block;cursor:pointer;opacity:.6}
+.thumb img.on{opacity:1;outline:1px solid var(--gold);outline-offset:1px}
+.kind{position:absolute;top:10px;left:10px;font-size:9px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;padding:4px 8px;background:rgba(255,255,255,.92);color:var(--gold-deep)}
+.body{padding:12px 12px 10px;display:grid;gap:6px}
+.body input,.body textarea,.body select{width:100%;border:0;border-bottom:1px solid transparent;background:transparent;padding:4px 2px;font-size:13px;font-weight:300}
+.body input:hover,.body textarea:hover{border-bottom-color:var(--line)}
+.body input:focus,.body textarea:focus,.body select:focus{outline:none;border-bottom-color:var(--gold)}
+.body .title{font-family:var(--display);font-weight:400;font-size:17px;color:var(--ink)}
+.body textarea{resize:vertical;min-height:40px}
+.st{font-weight:500!important;font-size:10px!important;letter-spacing:.14em;text-transform:uppercase;border-radius:999px!important;padding:4px 10px!important;width:auto!important;cursor:pointer;border:0!important}
+.st-idea{background:var(--idea-soft)!important;color:var(--idea)}
+.st-short{background:var(--mid-soft)!important;color:var(--mid)}
+.st-final,.st-ready{background:var(--ok-soft)!important;color:var(--ok)}
+.row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.mini{border:0;background:transparent;font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;color:var(--muted);cursor:pointer;padding:4px 6px}
+.mini:hover{color:var(--gold-deep)}
+.mini.confirm{background:var(--shivani);color:#fff}
+.linkout{font-size:12px;color:var(--gold-deep);text-decoration:none;border-bottom:1px solid var(--gold-soft);justify-self:start}
+.uploading{font-size:12px;color:var(--gold-deep);font-style:italic}
+.addev{justify-self:center;border:1px solid var(--gold);background:transparent;color:var(--gold-deep);border-radius:999px;padding:10px 22px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;cursor:pointer}
+.addev:hover{background:var(--gold-soft)}
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:96vw;max-height:94vh}
+dialog::backdrop{background:rgba(255,255,255,.94)}
+dialog img{max-width:96vw;max-height:84vh;display:block;box-shadow:0 20px 60px rgba(60,40,10,.18)}
+dialog .lb-bar{display:flex;justify-content:center;gap:10px;margin-top:14px}
+dialog button{background:transparent;color:var(--gold-deep);border:1px solid var(--gold);border-radius:999px;padding:7px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+dialog button.danger{border-color:var(--shivani);color:var(--shivani)}
+@media (max-width:720px){
+  .cols{grid-template-columns:1fr}
+  .col{padding:4px 0 22px}
+  .col+.col{border-left:0;border-top:1px solid var(--line);padding-top:20px}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+}
+@media (prefers-reduced-motion:no-preference){.tl,.add,.side,.mini,.addev{transition:background .2s,color .2s,border-color .2s}}
+
+.savebar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
+.savebar p{margin:0;font-size:12px;color:var(--muted);font-weight:300;text-align:center}
+#saveBtn{border:1px solid var(--gold);background:transparent;color:var(--gold-deep);border-radius:999px;padding:8px 18px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;cursor:pointer}
+#saveBtn.hot{background:var(--gold);color:#fff}
+.wrap{padding-bottom:140px}
+body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+.frame{position:relative;overflow:hidden;background:var(--shade)}
+.frame .hero{-webkit-user-drag:none;user-select:none}
+.frame.adjust{touch-action:none;cursor:grab;outline:1px solid var(--gold);outline-offset:-1px}
+.frame.adjust:active{cursor:grabbing}
+.frame.adjust .hero{cursor:grab}
+.frame.adjust::after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,transparent 33.2%,rgba(255,255,255,.75) 33.2% 33.5%,transparent 33.5% 66.5%,rgba(255,255,255,.75) 66.5% 66.8%,transparent 66.8%),linear-gradient(to bottom,transparent 33.2%,rgba(255,255,255,.75) 33.2% 33.5%,transparent 33.5% 66.5%,rgba(255,255,255,.75) 66.5% 66.8%,transparent 66.8%)}
+.adj{display:grid;gap:6px;padding:8px 10px;background:var(--gold-soft);font-size:12px;color:var(--gold-deep)}
+.adj .zoom{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.adj input[type=range]{flex:1;accent-color:var(--gold);min-width:0}
+.ptools{display:flex;flex-wrap:wrap;gap:0 2px;padding:6px 6px 0;border-bottom:1px solid var(--line)}
+.mini.gold{color:var(--gold-deep);border:1px solid var(--gold);border-radius:999px;padding:4px 12px}
+.thumb img{object-fit:cover}
+.savebar{position:fixed;left:0;right:0;bottom:0;z-index:6;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+.savebar p{margin:0;font-size:12px;color:var(--muted);font-weight:300;text-align:center;max-width:46ch}
+.savebar button{border:1px solid var(--gold);background:transparent;color:var(--gold-deep);border-radius:999px;padding:8px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:500;cursor:pointer}
+#liveBtn{background:var(--gold);color:#fff}
+#saveBtn.hot{background:var(--gold);color:#fff}
+.wrap{padding-bottom:150px}
+#setup{background:#fff;border:1px solid var(--line);padding:0;max-width:min(560px,94vw);max-height:90vh;overflow:auto;box-shadow:0 30px 80px rgba(60,40,10,.18)}
+#setup::backdrop{background:rgba(255,255,255,.85)}
+.setup{padding:26px 22px;display:grid;gap:14px}
+.setup h2{font-family:var(--display);font-weight:400;color:var(--gold);font-size:28px;line-height:1.1;margin:0}
+.setup p{margin:0;color:var(--muted);font-size:14px;font-weight:300}
+.setup ol{margin:0;padding-left:20px;display:grid;gap:10px;font-size:14px}
+.setup ol b{font-weight:500}
+.setup textarea{width:100%;font-family:ui-monospace,Menlo,monospace;font-size:11px;border:1px solid var(--line);background:var(--shade);padding:8px;resize:vertical;margin-top:6px}
+.setup label{display:grid;gap:4px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.setup input{border:0;border-bottom:1px solid var(--line);padding:6px 0;font-size:14px;letter-spacing:0;text-transform:none;color:var(--ink);background:transparent}
+.setup input:focus{outline:none;border-bottom-color:var(--gold)}
+#setup button{background:transparent;color:var(--gold-deep);border:1px solid var(--gold);border-radius:999px;padding:7px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer}
+#setup button.solid{background:var(--gold);color:#fff}
+#setup button.plain{border-color:transparent;color:var(--muted)}
+#setup button:disabled{opacity:.6}
+#copySql{margin-left:6px;padding:3px 10px!important}
+.msg{font-size:13px!important;color:var(--muted)} .msg.err{color:var(--shivani)!important} .msg.ok{color:#2F6B47!important}
+.setup .end{display:flex;justify-content:flex-end;gap:8px}
+
+.gate{min-height:100vh;display:grid;place-items:center;padding:24px 16px;background:#FFFFFF}
+.gate-card{width:min(380px,100%);display:grid;gap:16px;justify-items:center;text-align:center}
+.gate-card[hidden]{display:none}
+.gate-title{font-family:var(--display);font-weight:400;font-style:italic;color:var(--gold);font-size:clamp(34px,9vw,48px);margin:0;line-height:1.05}
+.gate-title .amp{font-style:normal;font-size:.6em;opacity:.75}
+.gate-card label{width:100%;display:grid;gap:4px;text-align:left;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.gate-card input{border:0;border-bottom:1px solid var(--line);padding:8px 0;font:inherit;font-size:16px;letter-spacing:0;text-transform:none;color:var(--ink);background:transparent}
+.gate-card input:focus{outline:none;border-bottom-color:var(--gold)}
+.gate-card button{margin-top:6px;border:1px solid var(--gold);background:var(--gold);color:#fff;border-radius:999px;padding:10px 32px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+.gate-card button:disabled{opacity:.6}
+#saveBtn,#liveBtn{display:none!important}
+#logoutBtn{order:3}
+</style>
+</head><body>
+
+<div id="gate" class="gate"><form id="gateForm" class="gate-card" hidden>
+<div class="eyebrow">Private lookbook</div>
+<h1 class="gate-title"><span class="a">Anurag</span> <span class="amp">&amp;</span> <span class="s">Shivani</span></h1>
+<div class="rule"></div>
+<label for="gateEmail">Email<input id="gateEmail" type="email" autocomplete="username" required></label>
+<label for="gatePass">Password<input id="gatePass" type="password" autocomplete="current-password" required></label>
+<p id="gateMsg" class="msg"></p>
+<button id="gateGo" type="submit" disabled>Enter</button>
+</form></div>
+<div id="app" hidden><div class="wrap">
+  <header>
+    <div class="eyebrow">The wedding wardrobe</div>
+    <h1><span class="a">Anurag</span> <span class="amp">&amp;</span> <span class="s">Shivani</span></h1>
+    <div class="rule"></div>
+    <p class="sub">Every event from the pre-wedding shoots to the sangeet night. Each of you has your own side for outfits and inspiration photos. Turn on live sync and every change, photos included, shows up for both of you.</p>
+    <div class="tally" id="tally"></div>
+    <div class="status" id="status">Connecting…</div>
+  </header>
+
+  <div class="nav">
+    <div class="timeline" id="timeline" aria-label="Jump to event"></div>
+    <div class="sides" role="group" aria-label="Show side">
+      <button class="side" data-side="both" aria-pressed="true">Both sides</button>
+      <button class="side" data-side="anurag" aria-pressed="false">Anurag</button>
+      <button class="side" data-side="shivani" aria-pressed="false">Shivani</button>
+    </div>
+  </div>
+
+  <main id="events"><div class="empty" style="font-style:normal;line-height:1.6">Loading your lookbook…<br><br>If this message stays, the app you opened it in is only <b>previewing</b> the file and can’t run it.<br>Save the file, then open it in <b>Safari</b> or <b>Chrome</b>.<br>On iPhone: tap Share › Save to Files, then open Files › long-press the file › Share › Safari (or open it on a laptop).</div></main>
+  <button class="addev" id="addEvent">+ Add another event</button>
+</div>
+
+<input type="file" id="picker" accept="image/*" multiple hidden>
+<dialog id="lb">
+  <img id="lbImg" alt="">
+  <div class="lb-bar"><button id="lbDel" class="danger" hidden>Remove photo</button><button id="lbClose">Close</button></div>
+</dialog>
+
+</div><div class="savebar" id="bar" hidden><button id="logoutBtn" type="button">Sign out</button><p id="saveNote">Saved on this device.</p><button id="liveBtn">Turn on live sync</button><button id="saveBtn">Save a copy</button></div>
+<dialog id="setup"><div class="setup">
+<div class="eyebrow">Live sync · one-time setup</div>
+<h2>Keep the lookbook live for both of you</h2>
+<p>A free Supabase project becomes the shared home for your looks and photos. Nobody signs in: anyone who has your file can see and edit it.</p>
+<ol>
+<li><b>Create a free project</b> at supabase.com.</li>
+<li><b>Open SQL Editor</b>, paste this and press Run.<button id="copySql">Copy SQL</button><textarea id="sql" rows="5" readonly>-- Anurag &amp; Shivani lookbook: run once in Supabase → SQL Editor
+create table if not exists public.lookbook_rows (
+  id text primary key,
+  kind text not null,
+  data jsonb not null,
+  updated_at timestamptz not null default now()
+);
+alter table public.lookbook_rows enable row level security;
+grant select, insert, update, delete on public.lookbook_rows to anon, authenticated;
+create policy &quot;lookbook read&quot;   on public.lookbook_rows for select using (true);
+create policy &quot;lookbook add&quot;    on public.lookbook_rows for insert with check (true);
+create policy &quot;lookbook edit&quot;   on public.lookbook_rows for update using (true) with check (true);
+create policy &quot;lookbook delete&quot; on public.lookbook_rows for delete using (true);
+alter publication supabase_realtime add table public.lookbook_rows;
+
+insert into storage.buckets (id, name, public) values (&#x27;lookbook&#x27;, &#x27;lookbook&#x27;, true)
+on conflict (id) do nothing;
+create policy &quot;lookbook photos read&quot;   on storage.objects for select using (bucket_id = &#x27;lookbook&#x27;);
+create policy &quot;lookbook photos upload&quot; on storage.objects for insert with check (bucket_id = &#x27;lookbook&#x27;);
+create policy &quot;lookbook photos delete&quot; on storage.objects for delete using (bucket_id = &#x27;lookbook&#x27;);
+</textarea></li>
+<li><b>Open Project Settings</b> and copy the Project URL and the anon (publishable) API key into the boxes below.</li>
+</ol>
+<label for="sbUrl">Project URL<input id="sbUrl" placeholder="https://abcd.supabase.co" autocomplete="off"></label>
+<label for="sbKey">Anon / publishable key<input id="sbKey" placeholder="Paste the key" autocomplete="off"></label>
+<p id="setupMsg" class="msg"></p>
+<div class="end"><button id="setupCancel" class="plain">Not now</button><button id="setupGo" class="solid">Connect</button></div>
+</div></dialog>
+<script type="application/json" id="lookbook-data">{"events":[],"looks":[]}</script>
+<script type="application/json" id="live-config">{"url":"https://itqxmjilazivzprixafa.supabase.co","key":"sb_publishable_LAMIJV_Eyhxu6wc16kSC2Q_-_yWmYTr"}</script>
+<script>(function(){
+const TABLE="lookbook_rows", BUCKET="lookbook", LIB="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.116.0/dist/umd/supabase.js";
+const COLORS=["snow","temple","ice","haldi","mehendi","puja","wedding","sangeet"];
+const STATUS=[["idea","Idea"],["short","Shortlisted"],["final","Final pick"],["ready","Bought / ready"]];
+const SIDES={anurag:"Anurag",shivani:"Shivani"};
+const $=s=>document.querySelector(s);
+const main=$("#events"), statusEl=$("#status");
+const TEMPLATE="<!doctype html>\n"+document.documentElement.outerHTML;
+let state=JSON.parse($("#lookbook-data").textContent);
+let baked={}; try{baked=JSON.parse($("#live-config").textContent||"{}")}catch(_){}
+let side="both", pending=false, uploading={}, dirty=false, cur={}, adjusting=null, idbOK=false, live=null, drag=null;
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const uid=()=>Math.random().toString(36).slice(2,10)+Date.now().toString(36).slice(-4);
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const P=p=>typeof p==="string"?{src:p,x:50,y:50,z:1}:{x:50,y:50,z:1,...p};
+const norm=()=>{state.events=state.events||[];state.looks=(state.looks||[]).map(l=>({...l,photos:(l.photos||[]).map(P)}))};
+norm();
+const setStatus=(t,e)=>{statusEl.textContent=t;statusEl.classList.toggle("err",!!e)};
+const cvar=c=>`--c:var(--e-${COLORS.includes(c)?c:"wedding"})`;
+const evs=()=>state.events.slice().sort((a,b)=>(a.order||0)-(b.order||0));
+const imgStyle=p=>`object-position:${p.x}% ${p.y}%;transform:scale(${p.z});transform-origin:${p.x}% ${p.y}%`;
+const BLANK="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+const signed={};
+const pathOf=s=>{const m=String(s||"").match(/\/storage\/v1\/object\/(?:public|sign|authenticated)\/lookbook\/([^?]+)/);return m?decodeURIComponent(m[1]):null};
+const show=s=>{const p=pathOf(s);return p?(signed[p]||BLANK):s};
+async function signAll(){if(!live)return;const need=[...new Set(state.looks.flatMap(l=>(l.photos||[]).map(p=>pathOf(p.src))).filter(p=>p&&!signed[p]))];if(!need.length)return;
+  const {data,error}=await live.sb.storage.from(BUCKET).createSignedUrls(need,60*60*24*7);
+  if(!error&&data){data.forEach(d=>{const u=d.signedUrl||d.signedURL;if(u&&d.path)signed[d.path]=u});renderAll()}}
+const typing=()=>main.contains(document.activeElement)&&/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)&&document.activeElement.type!=="range";
+
+/* ---------- this-device storage ---------- */
+function idb(){return new Promise((res,rej)=>{try{const r=indexedDB.open("anurag-shivani-lookbook",1);r.onupgradeneeded=()=>r.result.createObjectStore("kv");r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)}catch(e){rej(e)}})}
+async function idbGet(k){try{const d=await idb();return await new Promise(r=>{const q=d.transaction("kv").objectStore("kv").get(k);q.onsuccess=()=>r(q.result??null);q.onerror=()=>r(null)})}catch(_){return null}}
+async function idbPut(v,k){try{const d=await idb();await new Promise((r,j)=>{const t=d.transaction("kv","readwrite");t.objectStore("kv").put(v,k);t.oncomplete=r;t.onerror=()=>j(t.error)});return true}catch(_){return false}}
+const within=(p,ms,fb)=>Promise.race([p,new Promise(r=>setTimeout(()=>r(fb),ms))]);
+async function idbTest(){const n=Date.now();if(!await idbPut(n,"probe"))return false;return (await idbGet("probe"))===n}
+
+function touched(){state.editedAt=Date.now();if(!live)dirty=true;updateBar();if(idbOK)idbPut(state,"state")}
+async function commit(kind,o){
+  o._t=Date.now();touched();
+  if(!live)return;
+  const {error}=await live.sb.from(TABLE).upsert({id:kind+":"+o.id,kind,data:o,updated_at:new Date().toISOString()});
+  error?setStatus("Couldn't sync that change. Check your connection: "+error.message,true):setStatus("Live · synced");
+}
+async function removeRows(ids){
+  touched();
+  if(!live||!ids.length)return;
+  const {error}=await live.sb.from(TABLE).delete().in("id",ids);
+  error?setStatus("Couldn't sync the delete: "+error.message,true):setStatus("Live · synced");
+}
+function updateBar(){
+  const note=$("#saveNote"),sb=$("#saveBtn"),lb=$("#liveBtn");
+  if(live){note.textContent="Live · every change syncs for both of you";lb.hidden=true;sb.textContent="Download a copy for Shivani";sb.classList.remove("hot");return}
+  lb.hidden=false;sb.textContent="Save a copy";sb.classList.toggle("hot",dirty);
+  note.textContent=!idbOK?"This browser can't remember edits to a downloaded file. Turn on live sync, or save a copy before closing.":dirty?"Saved on this device. Turn on live sync so Shivani sees it too.":"Saved on this device.";
+}
+
+/* ---------- render ---------- */
+function looksFor(e,sd){return state.looks.filter(l=>l.eventId===e&&l.side===sd).sort((a,b)=>(a.kind===b.kind?0:a.kind==="outfit"?-1:1)||(a.order||0)-(b.order||0))}
+function renderTally(){
+  const E=state.events.length;
+  const locked=sd=>state.events.filter(e=>state.looks.some(l=>l.eventId===e.id&&l.side===sd&&(l.status==="final"||l.status==="ready"))).length;
+  $("#tally").innerHTML=`<span>${E} events</span><span class="a">Anurag · ${locked("anurag")}/${E} events locked</span><span class="s">Shivani · ${locked("shivani")}/${E} events locked</span>`;
+}
+function renderTimeline(){
+  $("#timeline").innerHTML=evs().map(e=>{const n=state.looks.filter(l=>l.eventId===e.id&&l.kind==="outfit").length;
+    return `<button class="tl" style="${cvar(e.color)}" data-jump="${esc(e.id)}"><i></i>${esc(e.short||e.name)} <b>${n}</b></button>`}).join("");
+}
+function card(l){
+  const ph=l.photos||[], c=Math.min(cur[l.id]||0,Math.max(ph.length-1,0)), p=ph[c], adj=adjusting&&adjusting.id===l.id;
+  const pic=p?`<div class="frame${adj?" adjust":""}" data-frame="${esc(l.id)}"><img class="hero" src="${esc(show(p.src))}" style="${imgStyle(adj?adjusting.p:p)}" alt="${esc(l.title||"Outfit photo")}"${adj?"":` data-open="${esc(l.id)}" data-idx="${c}"`} draggable="false"><span class="kind">${l.kind==="inspo"?"Inspiration":"Outfit"}</span></div>`
+    :`<div class="frame"><button class="nopic" data-up="${esc(l.id)}">+ Add photos</button><span class="kind">${l.kind==="inspo"?"Inspiration":"Outfit"}</span></div>`;
+  const adjui=adj?`<div class="adj"><span>Drag the photo to frame it</span><label class="zoom">Zoom<input type="range" id="z-${l.id}" min="1" max="3" step="0.05" value="${adjusting.p.z}" data-zoom="${esc(l.id)}"></label><div class="row"><button class="mini" data-adjreset="${esc(l.id)}">Reset</button><button class="mini gold" data-adjdone="${esc(l.id)}" style="margin-left:auto">Done</button></div></div>`:"";
+  const tools=p&&!adj?`<div class="ptools"><button class="mini" data-adjust="${esc(l.id)}">Reposition</button><button class="mini" data-replace="${esc(l.id)}">Replace</button><button class="mini" data-up="${esc(l.id)}">+ Add</button></div>`:"";
+  const thumbs=ph.length>1&&!adj?`<div class="thumbs">${ph.map((q,i)=>`<div class="thumb"><img src="${esc(show(q.src))}" style="${imgStyle(q)}" alt="" class="${i===c?"on":""}" data-pick="${esc(l.id)}" data-idx="${i}" loading="lazy"></div>`).join("")}</div>`:"";
+  return `<article class="card ${l.kind==="inspo"?"inspo":""}" data-id="${esc(l.id)}">
+<div class="pics">${pic}</div>${adjui}${tools}${thumbs}
+<div class="body">
+<input class="title" id="t-${l.id}" data-f="title" value="${esc(l.title)}" placeholder="${l.kind==="inspo"?"What you like about it":"Outfit name"}">
+${l.kind==="outfit"?`<div class="row"><select id="s-${l.id}" data-f="status" class="st st-${l.status||"idea"}">${STATUS.map(([v,t])=>`<option value="${v}"${v===(l.status||"idea")?" selected":""}>${t}</option>`).join("")}</select></div>`:""}
+<textarea id="n-${l.id}" data-f="notes" rows="2" placeholder="Colour, designer, tailor, fitting date…">${esc(l.notes)}</textarea>
+<input id="k-${l.id}" data-f="link" value="${esc(l.link)}" placeholder="Link (shop, Instagram…)">
+${l.link&&/^https?:\/\//.test(l.link)?`<a class="linkout" href="${esc(l.link)}" target="_blank" rel="noopener">Open link ↗</a>`:""}
+${uploading[l.id]?`<div class="uploading">Adding ${uploading[l.id]} photo${uploading[l.id]>1?"s":""}…</div>`:""}
+<div class="row"><button class="mini" data-del="${esc(l.id)}" style="margin-left:auto">Delete look</button></div>
+</div></article>`;
+}
+function column(e,sd){
+  const ls=looksFor(e.id,sd);
+  return `<section class="col" data-side="${sd}"${side!=="both"&&side!==sd?" hidden":""}>
+<div class="col-head"><span class="who ${sd}">${SIDES[sd]}</span><button class="add" data-new="outfit" data-ev="${esc(e.id)}" data-sd="${sd}">+ Outfit</button><button class="add" data-new="inspo" data-ev="${esc(e.id)}" data-sd="${sd}">+ Inspiration</button></div>
+${ls.length?`<div class="cards">${ls.map(card).join("")}</div>`:`<div class="empty">No ${SIDES[sd]} looks for this event yet. Add an outfit or drop in inspiration photos.</div>`}
+</section>`;
+}
+function renderEvents(force){
+  if(!force&&(typing()||adjusting||drag)){pending=true;return}
+  pending=false;
+  const E=evs();
+  if(!E.length){main.innerHTML=`<div class="empty">No events yet. Add your first one below.</div>`;return}
+  main.innerHTML=E.map(e=>`<article class="event" id="ev-${esc(e.id)}" style="${cvar(e.color)}">
+<div class="ev-head">
+<div class="ev-tag">${esc(e.tag||"Event")}</div>
+<input class="ev-name" id="en-${e.id}" data-ef="name" data-ev="${esc(e.id)}" value="${esc(e.name)}">
+<div class="ev-meta">
+<input class="place" id="ep-${e.id}" data-ef="place" data-ev="${esc(e.id)}" value="${esc(e.place)}" placeholder="Location / setting">
+<input type="date" id="ed-${e.id}" data-ef="date" data-ev="${esc(e.id)}" value="${esc(e.date)}">
+<button class="ev-del" data-evdel="${esc(e.id)}">Remove event</button>
+</div></div>
+<div class="cols">${column(e,"anurag")}${column(e,"shivani")}</div>
+</article>`).join("");
+}
+function renderAll(force){renderTally();renderTimeline();renderEvents(force)}
+
+/* ---------- edits ---------- */
+main.addEventListener("change",e=>{
+  const el=e.target;
+  if(el.dataset.ef){const x=state.events.find(v=>v.id===el.dataset.ev);if(!x||x[el.dataset.ef]===el.value)return;x[el.dataset.ef]=el.value;if(el.dataset.ef==="name")x.short=el.value;renderTimeline();commit("event",x);return}
+  const c=el.closest(".card");if(!c||!el.dataset.f)return;
+  const l=state.looks.find(v=>v.id===c.dataset.id);if(!l||l[el.dataset.f]===el.value)return;
+  l[el.dataset.f]=el.value; if(el.dataset.f==="status"){el.className="st st-"+el.value;renderTally()}
+  commit("look",l);
+});
+main.addEventListener("focusout",()=>setTimeout(()=>{if(pending&&!typing()&&!adjusting)renderAll()},0));
+
+let upTarget=null;
+function pick(target,multiple){upTarget=target;const p=$("#picker");p.multiple=multiple;p.click()}
+main.addEventListener("click",async e=>{
+  const t=e.target.closest("button,img")||e.target, d=t.dataset||{};
+  if(d.new){
+    const order=state.looks.reduce((a,l)=>Math.max(a,l.order||0),0)+1, id=uid(), kind=d.new;
+    const l={id,eventId:d.ev,side:d.sd,kind,title:"",status:kind==="outfit"?"idea":null,notes:"",link:"",photos:[],order};
+    state.looks.push(l);renderAll(true);commit("look",l);
+    if(kind==="inspo")pick({id},true);else{const i=document.getElementById("t-"+id);if(i)i.focus()}
+    return;
+  }
+  if(d.up){pick({id:d.up},true);return}
+  if(d.replace){pick({id:d.replace,idx:cur[d.replace]||0},false);return}
+  if(d.pick){cur[d.pick]=+d.idx;renderEvents(true);return}
+  if(d.open){openLb(d.open,+d.idx);return}
+  if(d.adjust){
+    const l=state.looks.find(x=>x.id===d.adjust);if(!l)return;const idx=Math.min(cur[l.id]||0,l.photos.length-1);
+    adjusting={id:l.id,idx,p:{...l.photos[idx]}};renderEvents(true);return;
+  }
+  if(d.adjreset){adjusting.p.x=50;adjusting.p.y=50;adjusting.p.z=1;applyAdj();const z=document.getElementById("z-"+adjusting.id);if(z)z.value=1;return}
+  if(d.adjdone){
+    const a=adjusting;adjusting=null;
+    const l=state.looks.find(x=>x.id===a.id);
+    if(l&&l.photos[a.idx]&&l.photos[a.idx].src===a.p.src){
+      l.photos[a.idx]={...l.photos[a.idx],x:Math.round(a.p.x*10)/10,y:Math.round(a.p.y*10)/10,z:a.p.z};
+      renderAll(true);await commit("look",l);
+    } else renderAll(true);
+    return;
+  }
+  if(d.del){
+    if(!t.classList.contains("confirm")){t.classList.add("confirm");t.textContent="Tap again to delete";setTimeout(()=>{if(t.isConnected){t.classList.remove("confirm");t.textContent="Delete look"}},3000);return}
+    state.looks=state.looks.filter(l=>l.id!==d.del);renderAll(true);removeRows(["look:"+d.del]);return;
+  }
+  if(d.evdel){
+    const id=d.evdel,gone=state.looks.filter(l=>l.eventId===id);
+    if(!t.classList.contains("confirm")){t.classList.add("confirm");t.textContent=gone.length?`Removes ${gone.length} look${gone.length>1?"s":""} too · tap again`:"Tap again to remove";setTimeout(()=>{if(t.isConnected){t.classList.remove("confirm");t.textContent="Remove event"}},3500);return}
+    state.events=state.events.filter(x=>x.id!==id);state.looks=state.looks.filter(l=>l.eventId!==id);renderAll(true);
+    removeRows(["event:"+id,...gone.map(l=>"look:"+l.id)]);
+  }
+});
+
+/* reposition: drag + zoom */
+function applyAdj(){const img=main.querySelector(`.frame.adjust img`);if(img&&adjusting)img.setAttribute("style",imgStyle(adjusting.p))}
+main.addEventListener("pointerdown",e=>{
+  const f=e.target.closest(".frame.adjust");if(!f||!adjusting)return;
+  const r=f.getBoundingClientRect();
+  drag={sx:e.clientX,sy:e.clientY,ox:adjusting.p.x,oy:adjusting.p.y,w:r.width,h:r.height};
+  try{f.setPointerCapture(e.pointerId)}catch(_){}
+  e.preventDefault();
+});
+main.addEventListener("pointermove",e=>{
+  if(!drag||!adjusting)return;
+  const k=1/adjusting.p.z;
+  adjusting.p.x=clamp(drag.ox-(e.clientX-drag.sx)/drag.w*100*k,0,100);
+  adjusting.p.y=clamp(drag.oy-(e.clientY-drag.sy)/drag.h*100*k,0,100);
+  applyAdj();
+});
+const endDrag=()=>{drag=null};
+main.addEventListener("pointerup",endDrag);main.addEventListener("pointercancel",endDrag);
+main.addEventListener("input",e=>{if(e.target.dataset.zoom&&adjusting){adjusting.p.z=+e.target.value;applyAdj()}});
+
+$("#timeline").addEventListener("click",e=>{const b=e.target.closest("[data-jump]");if(b){const el=document.getElementById("ev-"+b.dataset.jump);if(el)el.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"start"})}});
+document.querySelectorAll(".side").forEach(b=>b.addEventListener("click",()=>{side=b.dataset.side;document.querySelectorAll(".side").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));renderEvents(true)}));
+$("#addEvent").addEventListener("click",()=>{
+  const order=state.events.reduce((a,x)=>Math.max(a,x.order||0),0)+1, id=uid();
+  const x={id,order,name:"New event",short:"New event",tag:"Event",place:"",date:"",color:COLORS[order%COLORS.length]};
+  state.events.push(x);renderAll(true);commit("event",x);
+  const i=document.getElementById("en-"+id);if(i){i.focus();i.select()}
+});
+
+/* ---------- photos ---------- */
+async function toCanvas(file){
+  let src;
+  try{src=await createImageBitmap(file)}catch(_){
+    src=await new Promise((res,rej)=>{const u=URL.createObjectURL(file),im=new Image();im.onload=()=>{res(im)};im.onerror=()=>{URL.revokeObjectURL(u);rej(new Error("unreadable"))};im.src=u});
+  }
+  const w=src.width||src.naturalWidth,h=src.height||src.naturalHeight,m=1600,s=Math.min(1,m/Math.max(w,h));
+  const c=document.createElement("canvas");c.width=Math.round(w*s);c.height=Math.round(h*s);
+  c.getContext("2d").drawImage(src,0,0,c.width,c.height);return c;
+}
+async function uploadBlob(blob){
+  const path=`photos/${uid()}.jpg`;
+  const {error}=await live.sb.storage.from(BUCKET).upload(path,blob,{contentType:"image/jpeg",upsert:false});
+  if(error)throw new Error(error.message);
+  return live.sb.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
+}
+async function makePhoto(file){
+  const c=await toCanvas(file);
+  if(live){const blob=await new Promise(r=>c.toBlob(r,"image/jpeg",.86));return {src:await uploadBlob(blob),x:50,y:50,z:1}}
+  return {src:c.toDataURL("image/jpeg",.82),x:50,y:50,z:1};
+}
+$("#picker").addEventListener("change",async e=>{
+  const files=[...e.target.files];e.target.value="";const tg=upTarget;upTarget=null;
+  if(!files.length||!tg)return;
+  uploading[tg.id]=files.length;renderEvents(true);
+  const add=[];
+  for(const f of files){try{add.push(await makePhoto(f))}catch(err){setStatus(err&&err.message&&err.message!=="unreadable"?"A photo didn't upload: "+err.message:"A photo couldn't be read. Try a JPG or PNG.",true)}}
+  delete uploading[tg.id];
+  const l=state.looks.find(x=>x.id===tg.id);
+  if(l&&add.length){
+    if(tg.idx!=null&&l.photos[tg.idx]){l.photos[tg.idx]=add[0];cur[l.id]=tg.idx}
+    else{l.photos=[...l.photos,...add];cur[l.id]=l.photos.length-add.length}
+    renderAll(true);await commit("look",l);signAll();
+  } else renderAll(true);
+});
+let lbRef=null;const lb=$("#lb");
+function openLb(id,idx){const l=state.looks.find(x=>x.id===id);if(!l||!l.photos[idx])return;lbRef={id,idx};$("#lbImg").src=show(l.photos[idx].src);$("#lbImg").alt=l.title||"Outfit photo";$("#lbDel").textContent="Remove photo";$("#lbDel").dataset.armed="";lb.showModal()}
+$("#lbClose").addEventListener("click",()=>lb.close());
+lb.addEventListener("click",e=>{if(e.target===lb)lb.close()});
+$("#lbDel").addEventListener("click",()=>{
+  const b=$("#lbDel");if(!b.dataset.armed){b.dataset.armed="1";b.textContent="Tap again to remove";return}
+  const l=state.looks.find(x=>x.id===lbRef.id);if(!l)return;
+  l.photos=l.photos.filter((_,i)=>i!==lbRef.idx);cur[l.id]=0;lb.close();renderAll(true);commit("look",l);
+});
+
+/* ---------- live sync (Supabase) ---------- */
+function loadLib(){return new Promise((res,rej)=>{if(window.supabase&&window.supabase.createClient)return res();const s=document.createElement("script");s.src=LIB;s.onload=()=>res();s.onerror=()=>rej(new Error("lib"));document.head.appendChild(s)})}
+function friendly(err){
+  const m=(err&&(err.message||err.msg||String(err)))||"Unknown error";
+  if(/relation|does not exist|schema cache|42P01/i.test(m))return "The lookbook table isn't set up yet. Run the setup SQL from step 2, then try again.";
+  if(/api key|apikey|JWT|401|Unauthorized/i.test(m))return "That key was rejected. Copy the anon (publishable) key from your project settings.";
+  if(/Failed to fetch|NetworkError|Load failed/i.test(m))return "Couldn't reach that project. Check the Project URL and your internet connection.";
+  return m;
+}
+function mergeRow(r){
+  const list=r.kind==="event"?"events":r.kind==="look"?"looks":null;if(!list||!r.data)return;
+  const o={...r.data};if(list==="looks")o.photos=(o.photos||[]).map(P);
+  const arr=state[list],i=arr.findIndex(x=>x.id===o.id);
+  if(i>=0){if((arr[i]._t||0)>(o._t||0))return;arr[i]=o}else arr.push(o);
+}
+function dropRow(rowId){const k=rowId.indexOf(":"),kind=rowId.slice(0,k),id=rowId.slice(k+1);
+  if(kind==="event")state.events=state.events.filter(x=>x.id!==id);if(kind==="look")state.looks=state.looks.filter(x=>x.id!==id)}
+function applyAll(rows){state.events=[];state.looks=[];rows.forEach(mergeRow)}
+async function pushAll(){
+  const photos=state.looks.flatMap(l=>l.photos).filter(p=>p.src.startsWith("data:"));
+  let n=0;
+  for(const p of photos){setStatus(`Uploading your photos… ${++n} of ${photos.length}`);const b=await (await fetch(p.src)).blob();p.src=await uploadBlob(b)}
+  const now=Date.now();state.events.forEach(e=>e._t=now);state.looks.forEach(l=>l._t=now);
+  const rows=[...state.events.map(e=>({id:"event:"+e.id,kind:"event",data:e})),...state.looks.map(l=>({id:"look:"+l.id,kind:"look",data:l}))];
+  if(rows.length){const {error}=await live.sb.from(TABLE).upsert(rows);if(error)throw error}
+}
+function subscribe(){
+  live.ch=live.sb.channel("lookbook-"+uid())
+    .on("postgres_changes",{event:"*",schema:"public",table:TABLE},pl=>{
+      if(pl.eventType==="DELETE"){if(pl.old&&pl.old.id)dropRow(pl.old.id)}else if(pl.new)mergeRow(pl.new);
+      if(idbOK)idbPut(state,"state");renderAll();signAll();
+    })
+    .subscribe(s=>{live.rt=s;if(s==="SUBSCRIBED")setStatus("Live · synced");else if(s==="CHANNEL_ERROR"||s==="TIMED_OUT")setStatus("Live · checking for changes every few seconds")});
+}
+async function refetch(){if(!live)return;const {data,error}=await live.sb.from(TABLE).select("id,kind,data");if(!error&&data){applyAll(data);if(idbOK)idbPut(state,"state");renderAll();signAll()}}
+setInterval(()=>{if(live&&live.rt!=="SUBSCRIBED"&&document.visibilityState==="visible"&&!typing()&&!adjusting&&!drag)refetch()},15000);
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible")refetch()});
+window.addEventListener("online",refetch);
+async function goLive(cfg,existing){
+  setStatus("Connecting to live sync…");
+  let sb=existing;
+  if(!sb){try{await loadLib()}catch(_){return {error:"Couldn't load live sync. Check your internet connection."}}}
+  if(!sb)try{sb=window.supabase.createClient(cfg.url.trim().replace(/\/+$/,""),cfg.key.trim(),{auth:{persistSession:false,autoRefreshToken:false}})}
+  catch(_){return {error:"That Project URL doesn't look right. It should look like https://abcd.supabase.co"}}
+  let res;try{res=await sb.from(TABLE).select("id,kind,data")}catch(e){return {error:friendly(e)}}
+  if(res.error)return {error:friendly(res.error)};
+  live={sb,cfg};
+  try{if(!res.data.length)await pushAll();else applyAll(res.data)}catch(e){live=null;return {error:friendly(e)}}
+  subscribe();dirty=false;if(idbOK)idbPut(state,"state");updateBar();renderAll(true);setStatus("Live · synced");signAll();
+  return {ok:true};
+}
+
+/* setup dialog */
+const setup=$("#setup");
+$("#liveBtn").addEventListener("click",()=>{$("#setupMsg").textContent="";setup.showModal()});
+$("#setupCancel").addEventListener("click",()=>setup.close());
+$("#copySql").addEventListener("click",async()=>{const ta=$("#sql");try{await navigator.clipboard.writeText(ta.value);$("#copySql").textContent="Copied"}catch(_){ta.focus();ta.select();$("#copySql").textContent="Selected · press Copy"}setTimeout(()=>$("#copySql").textContent="Copy SQL",2500)});
+$("#setupGo").addEventListener("click",async()=>{
+  let url=$("#sbUrl").value.trim();const key=$("#sbKey").value.trim();const ref=url.match(/supabase\.com\/dashboard\/project\/([a-z0-9]+)/i);if(ref){url=`https://${ref[1]}.supabase.co`;$("#sbUrl").value=url}const msg=$("#setupMsg"),go=$("#setupGo");
+  if(!/^https:\/\/.+/.test(url)||key.length<20){msg.textContent="Paste both the Project URL (starts with https://) and the key.";msg.className="msg err";return}
+  go.disabled=true;go.textContent="Connecting…";msg.className="msg";msg.textContent="";
+  const r=await goLive({url,key});
+  go.disabled=false;go.textContent="Connect";
+  if(r.error){msg.textContent=r.error;msg.className="msg err";setStatus(r.error,true);return}
+  try{localStorage.setItem("lookbook-live",JSON.stringify({url,key}))}catch(_){}
+  msg.className="msg ok";msg.textContent="Connected. Now tap “Download a copy for Shivani” and send her that file. It opens straight into the live lookbook.";
+  setTimeout(()=>{if(setup.open)setup.close()},4500);
+});
+
+/* save / share a copy */
+function setBlock(html,id,json){const open=`<script type="application/json" id="${id}">`,a=html.indexOf(open),b=html.indexOf("<\/script>",a);return html.slice(0,a+open.length)+json+html.slice(b)}
+$("#saveBtn").addEventListener("click",()=>{
+  if(document.activeElement)document.activeElement.blur();
+  state.savedAt=Date.now();
+  let html=setBlock(TEMPLATE,"lookbook-data",JSON.stringify(state).replace(/</g,"\\u003c"));
+  if(live)html=setBlock(html,"live-config",JSON.stringify(live.cfg).replace(/</g,"\\u003c"));
+  const d=new Date(),stamp=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([html],{type:"text/html"}));a.download=live?"Anurag-Shivani-Lookbook-Live.html":`Anurag-Shivani-Lookbook-${stamp}.html`;
+  document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+  if(!live){dirty=false;updateBar();if(idbOK)idbPut(state,"state")}
+  setStatus(live?"Downloaded. Send that file to Shivani.":"Saved a copy to your Downloads.");
+});
+window.addEventListener("beforeunload",e=>{if(!live&&dirty&&!idbOK){e.preventDefault();e.returnValue=""}});
+
+/* ---------- sign-in gate ---------- */
+let sbClient=null;
+async function enter(){
+  $("#gate").hidden=true;$("#app").hidden=false;$("#bar").hidden=false;
+  idbOK=await within(idbTest(),1500,false);
+  updateBar();renderAll(true);
+  const r=await goLive(baked,sbClient);
+  if(r.error)setStatus(/permission|row-level|JWT|401/i.test(r.error)?"Your account can't open this lookbook.":"Couldn't load the lookbook: "+r.error,true);
+}
+(async function start(){
+  const msg=$("#gateMsg"),btn=$("#gateGo");
+  try{await within(loadLib(),8000,null)}catch(_){}
+  if(!window.supabase){msg.textContent="Couldn't connect. Check your internet and reload.";msg.className="msg err";return}
+  sbClient=window.supabase.createClient(baked.url,baked.key,{auth:{persistSession:true,autoRefreshToken:true,storageKey:"as-lookbook-auth"}});
+  sbClient.auth.onAuthStateChange(ev=>{if(ev==="SIGNED_OUT")location.reload()});
+  btn.disabled=false;
+  const {data}=await sbClient.auth.getSession();
+  if(data&&data.session){enter();return}
+  $("#gateForm").hidden=false;$("#gateEmail").focus();
+  $("#gateForm").addEventListener("submit",async e=>{
+    e.preventDefault();
+    const email=$("#gateEmail").value.trim(),password=$("#gatePass").value;
+    if(!email||!password){msg.textContent="Enter your email and password.";msg.className="msg err";return}
+    btn.disabled=true;btn.textContent="Signing in…";msg.textContent="";
+    const {error}=await sbClient.auth.signInWithPassword({email,password});
+    btn.disabled=false;btn.textContent="Enter";
+    if(error){msg.textContent=/confirm/i.test(error.message)?"This account isn't confirmed yet.":"That email and password don't match.";msg.className="msg err";return}
+    $("#gatePass").value="";enter();
+  });
+})();
+$("#logoutBtn").addEventListener("click",async()=>{try{await sbClient.auth.signOut()}catch(_){}try{indexedDB.deleteDatabase("anurag-shivani-lookbook")}catch(_){}location.reload()});
+})();
+</script>
+</body></html>
